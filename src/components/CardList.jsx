@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
+// This is a PURE FUNCTION, hence a DUMB COMPONENT
 const CardList = ({ robots }) => {
     return (
         <div>

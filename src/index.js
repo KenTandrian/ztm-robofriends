@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from "./App"; // this is default export, no need brackets
+import App from "./containers/App"; // this is default export, no need brackets
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 
