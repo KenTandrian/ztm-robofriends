@@ -3,6 +3,10 @@ import Card from './Card';
 
 // This is a PURE FUNCTION, hence a DUMB COMPONENT
 const CardList = ({ robots }) => {
+    // How to make an error:
+    // if (true) {
+    //     throw new Error ('NOOOOOOO!');
+    // }
     return (
         <div>
             {
