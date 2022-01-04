@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Robo Friends App
+
+A project made with React JS for displaying and filtering robot profiles. This web application project is created to complete the Zero To Mastery course on Udemy.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -69,5 +71,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# RoboFriends
-A web application project using React, created to complete the Zero To Mastery course on Udemy.
+## Project Structure
+/
+├── public
+│   ├── index.html
+│   └── manifest.json
+├──  src
+│   ├── components
+|   │   ├── Card.jsx
+|   │   ├── CardList.jsx
+|   │   ├── ErrorBoundary.jsx
+|   │   ├── Scroll.jsx
+│   |   └── SearchBox.jsx
+│   ├── containers
+|   │   ├── App.jsx
+|   │   ├── App.css
+│   |   └── SEGA.woff
+│   ├── index.js
+│   ├── index.css
+│   ├── reportWebVitals.js
+│   ├── robots.js
+│   └── setupTests.js
+├── .gitignore
+├── README.md
+├── package-lock.json
+└── package.json
