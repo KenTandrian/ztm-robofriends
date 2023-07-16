@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ name, email, id }) => {
+const Card = ({ name, email, id }: Pick<Robot, "name" | "email" | "id">) => {
     // ES6 destructuring above in the parameter
     return (
         <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
