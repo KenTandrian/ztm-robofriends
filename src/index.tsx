@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
@@ -15,13 +15,12 @@ const logger = createLogger(); // Middleware
 const rootReducers = combineReducers({ requestRobots, searchRobots });
 const store = createStore(rootReducers, applyMiddleware(thunkMiddleware, logger)); // supposed to be rootReducer
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Provider  store={store}>
+    <Provider store={store}>
       <App/>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
 );
 // What does it mean?
 // Hey ReactDOM (react comp which interacts with the DOM, render the first parameter in the div.root)
