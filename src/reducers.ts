@@ -10,8 +10,8 @@ const initialStateSearch = {
 };
 
 // REDUCER: Which is a pure function.
-export const searchRobots = (state=initialStateSearch, action={}) => {
-    switch(action.type) {
+export const searchRobots = (state=initialStateSearch, action:Action={ type: "" }) => {
+    switch(action.type) { 
         case CHANGE_SEARCH_FIELD:
             return Object.assign({}, state, {searchField: action.payload});
         default:
@@ -25,7 +25,7 @@ const initialStateRobots = {
     error: ''
 }
 
-export const requestRobots = (state=initialStateRobots, action={}) => {
+export const requestRobots = (state=initialStateRobots, action:Action={ type: "" }) => {
     switch(action.type) {
         case REQUEST_ROBOTS_PENDING:
             return Object.assign({}, state, { isPending: true });
