@@ -8,8 +8,9 @@ import ErrorBoundry from "../components/ErrorBoundary";
 import './App.css';
 
 import { setSearchField, requestRobots } from '../actions';
+import { Dispatch } from "redux";
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: any) => {
     return {
         searchField: state.searchRobots.searchField,
         robots: state.requestRobots.robots,
@@ -18,9 +19,9 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: Dispatch<any>) => {
     return {
-        onSearchChange: (event) => {
+        onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => {
             dispatch(setSearchField(event.target.value));
         },
         onRequestRobots: () => {
@@ -29,7 +30,15 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-class App extends Component {
+type Props = {
+    searchField: string;
+    onSearchChange: React.ChangeEventHandler<HTMLInputElement>;
+    robots: Robot[];
+    isPending: boolean;
+    onRequestRobots: () => void;
+}
+
+class App extends Component<Props> {
 //function App() {
     // constructor() {
     //     super();
