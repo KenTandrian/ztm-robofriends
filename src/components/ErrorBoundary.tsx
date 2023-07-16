@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
 // ErrorBoundry will only show in Production
-class ErrorBoundry extends Component {
-    constructor(props) {
+class ErrorBoundry extends Component<any, { hasError: boolean }> {
+    constructor(props: any) {
         super(props);
         this.state = {
             hasError: false
         };
     }
 
-    componentDidCatch(error, info) {
+    componentDidCatch(error: any, info: any) {
         this.setState({ hasError: true });
     }
 
