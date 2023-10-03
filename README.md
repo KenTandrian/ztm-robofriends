@@ -83,5 +83,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ├── package.json
 ├── README.md
 ├── tsconfig.json
-└── vite.config.js
+└── vite.config.ts
 ```
