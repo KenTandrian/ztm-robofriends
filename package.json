@@ -45,7 +45,7 @@
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
-    "@types/redux-logger": "^3.0.9",
+    "@types/redux-logger": "3.0.10",
     "gh-pages": "6.0.0",
     "typescript": "5.2.2"
   },
