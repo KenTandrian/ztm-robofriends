@@ -47,12 +47,12 @@
     "@testing-library/user-event": "^14.5.1",
     "@types/redux-logger": "^3.0.9",
     "gh-pages": "6.0.0",
-    "typescript": "^5.1.6"
+    "typescript": "5.2.2"
   },
   "overrides": {
     "react-scripts": {
       "@svgr/webpack": "^8.0.1",
-      "typescript": "^5.1.6"
+      "typescript": "^5.2.2"
     }
   }
 }
