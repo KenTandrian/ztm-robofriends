@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import { thunk } from 'redux-thunk';
 import App from "./containers/App"; // this is default export, no need brackets
 import reportWebVitals from './reportWebVitals';
 import { searchRobots, requestRobots } from './reducers';
@@ -17,7 +16,7 @@ const rootReducers = combineReducers({ requestRobots, searchRobots });
 const store = configureStore({
   reducer: rootReducers,
   // @ts-ignore
-  middleware: (gDM) => gDM().concat(thunk, logger),
+  middleware: (gDM) => gDM().concat(logger),
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
