@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
-import thunkMiddleware from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import App from "./containers/App"; // this is default export, no need brackets
 import reportWebVitals from './reportWebVitals';
 import { searchRobots, requestRobots } from './reducers';
@@ -13,7 +13,8 @@ import 'tachyons';
 
 const logger = createLogger(); // Middleware
 const rootReducers = combineReducers({ requestRobots, searchRobots });
-const store = createStore(rootReducers, applyMiddleware(thunkMiddleware, logger)); // supposed to be rootReducer
+// @ts-ignore
+const store = createStore(rootReducers, applyMiddleware(thunk, logger)); // supposed to be rootReducer
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
