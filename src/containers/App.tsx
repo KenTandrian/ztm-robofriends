@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 // import { robots } from './robots';
-import Scroll from '../components/Scroll';
 import ErrorBoundry from "../components/ErrorBoundary";
+import Scroll from '../components/Scroll';
 import './App.css';
 
-import { setSearchField, requestRobots } from '../actions';
 import { Dispatch } from "redux";
+import { requestRobots, setSearchField } from '../actions';
 
 const mapStateToProps = (state: any) => {
     return {
@@ -39,7 +39,7 @@ type Props = {
 }
 
 class App extends Component<Props> {
-//function App() {
+    //function App() {
     // constructor() {
     //     super();
     //     this.state = {
@@ -77,7 +77,7 @@ class App extends Component<Props> {
     // }
 
     // const { robots, searchfield } = this.state;
-    
+
     render() {
         //const {robots} = this.state;
         const { searchField, onSearchChange, robots, isPending } = this.props;
@@ -91,16 +91,16 @@ class App extends Component<Props> {
                 <div className="tc">
                     <h1 className="f1">RoboFriends</h1>
                     {/* <button onClick={() => setCount(count+1)}>Click Me!</button> */}
-                    <SearchBox searchChange={onSearchChange}/>
+                    <SearchBox searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundry>
-                            <CardList robots={filteredRobots}/>
+                            <CardList robots={filteredRobots} />
                         </ErrorBoundry>
                     </Scroll>
                 </div>
             );
     }
-     // the state is passed to the children as props
+    // the state is passed to the children as props
 }
 // Connect is a higher-order function,  that returns another function.
 // The function returned by connect() will have App as its parameter.

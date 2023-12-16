@@ -1,14 +1,14 @@
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import App from "./containers/App"; // this is default export, no need brackets
+import { requestRobots, searchRobots } from './reducers';
 import reportWebVitals from './reportWebVitals';
-import { searchRobots, requestRobots } from './reducers';
 
-import './index.css';
 import 'tachyons';
+import './index.css';
 
 const logger = createLogger(); // Middleware
 const rootReducers = combineReducers({ requestRobots, searchRobots });
@@ -22,7 +22,7 @@ const store = configureStore({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App/>
+      <App />
     </Provider>
   </React.StrictMode>,
 );
