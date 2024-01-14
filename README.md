@@ -5,7 +5,7 @@
 [![top-language](https://img.shields.io/github/languages/top/KenTandrian/ztm-robofriends)](https://github.com/KenTandrian/ztm-robofriends/search?l=javascript)
 [![commit](https://img.shields.io/github/commit-activity/m/KenTandrian/ztm-robofriends)](https://github.com/KenTandrian/ztm-robofriends/commits/main)
 [![last-commit](https://img.shields.io/github/last-commit/KenTandrian/ztm-robofriends)](https://github.com/KenTandrian/ztm-robofriends/commits/main)
-[![pages-build-deployment](https://github.com/KenTandrian/ztm-robofriends/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/KenTandrian/ztm-robofriends/actions/workflows/pages/pages-build-deployment)
+[![Deploy to GitHub Pages](https://github.com/KenTandrian/ztm-robofriends/actions/workflows/deploy.yml/badge.svg)](https://github.com/KenTandrian/ztm-robofriends/actions/workflows/deploy.yml)
 
 ## Introduction
 A project made with React JS for displaying and filtering robot profiles. This web application project is created to complete the Zero To Mastery course on Udemy.
@@ -83,5 +83,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ├── package.json
 ├── README.md
 ├── tsconfig.json
-└── vite.config.ts
+└── vite.config.mts
 ```
