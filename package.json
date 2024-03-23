@@ -1,7 +1,7 @@
 {
   "name": "robofriends",
   "homepage": "https://kentandrian.github.io/ztm-robofriends",
-  "version": "0.1.61",
+  "version": "0.1.69",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
